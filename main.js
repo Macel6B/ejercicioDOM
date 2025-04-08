@@ -32,6 +32,19 @@ btnMostrar.addEventListener("click", function (event){
     event.preventDefault(); 
     console.log("botón btn Modificar presionado");
      
+    let elementoUno = document.createElement("li");
+    elementoUno.innerText="Another item"; // Equivalente a <li>Another item</li>
+    elementoUno.classList.add("list-group-item"); 
+
+    let elementoDos = elementoUno.cloneNode(true);
+
+    // listas.item(0).before(elementoUno);
+    // listas.item(0).prepend(elementoDos);
+    listas.item(0).append(elementoUno);
+    listas.item(0).after(elementoDos);
+
+
 });
+
 
 
